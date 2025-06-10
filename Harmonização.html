@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+   
+</head>
+
+<body>
+    <header> 
+        
+   <table border="0" cellspacing="20" cellpadding="0" width="100%">
+  <tr>
+ <td align="left" class=imgLogo> <img src="imagens/CanastraoLogoTopo.png" alt="Logo do Canastrão"> </td>
+
+<td>
+    <ender> 
+   <address>
+    Av. Gorgonzola, 235 <br>
+    Tel: (21) 91235-1235 <br>
+   <a href="mailto:contato@canastrao.com.br">contato@canastrao.com.br</a>
+  </address>
+    </ender>
+ </td>
+</tr>                     
+</table>
+</header> 
+
+
+    <nav> 
+    <table  border="0" cellspacing="20" cellpadding="0" width="100%">
+            <tr>
+                <td> 
+                     <ul> 
+                    <li> <a href="CanastraoQueijos.html"  base target="_blank"/> Apresentação </a></li>  
+                     </ul>
+                </td>
+            </tr>
+            
+            <tr> 
+                <td> 
+                    <ul> 
+                    <li> <a href="Queijos.html" base target="_blank"/> Queijos </a></li>
+                    </ul>
+                </td>
+            </tr>
+            
+            <tr> 
+               <td> 
+                    <ul> 
+                    <li> <a href="Harmonização.html"  base target="_blank"/> Harmonização </a></li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td> 
+                    <ul> 
+                    <li> <a href="Pedidos.html"  base target="_blank"/> Pedidos </a></li>
+                    </ul>
+                </td>
+            </tr>
+            </table>
+        </nav>
+       
+        
+         <main> 
+            <section class="janQueijos"> 
+          <table align=center border="0" class="ListaQueijo">
+                <h1> Harmonização de Queijos e Vinhos </h1>
+                <tr>
+                    <td valign="top" height= "70"> 
+                <dl>
+                 
+                <dt class="procedência"> Queijos Nacionais: </dt> 
+                <ul>
+                     <li> <a href="#" onclick="abrirNovaJanela('Canastra')"> Canastra </a> <br> </li>
+                </ul>
+                     
+             <ul> 
+                    <li> <a href="#" onclick="abrirNovaJanela('Minas')"> Minas </a> </li>
+             </ul>
+
+             <dl>
+             <dt class="procedência"> Queijos Internacionais: </dt>
+             <ul>
+                 <li> <a href="#" onclick = "abrirNovaJanela('Gorgonzola')"> Gorgonzola </a> </li>
+            </ul>
+             </dl> 
+            </tr>
+           </section>
+            </table>
+            </main>
+        <script>
+            
+            const ListaQueijo = {
+                Canastra: ["Canastra", "<img src='Imagens/QueijoCanastra_150.jpg'> </a>" , "Harmoniza perfeitamente com tintos de corpo médio e taninos macios."],
+                Minas: ["Minas", "<img src='Imagens/QueijoMinas_150.jpg'> </a>", "Quando combinado com a goiabada ou mel, espumantes ou brancos de colheita tardia."],
+                Gorgonzola: ["Gorgonzola", "<img src='Imagens/QueijoGorgonzola_150.jpg'> </a>" , "Pede vinhos intensamente aromáticos e com tendência adocicada, como os do Porto, os Madeira ou Moscatéis."]
+            };
+        
+          function abrirNovaJanela(Queijo){
+            var janela = open("", " ", "width=330,height=300");
+
+            with(janela.document) {
+                write("<!DOCTYPE html>")
+                write("<html><head><title>" + ListaQueijo[Queijo][0] + "</title>");
+                write("<link rel='stylesheet' type='text/css' href='CSS/style.css'>");
+                write("<div class='pedidos'>");
+                write("</head><body>");
+                write("<h1>" + ListaQueijo[Queijo][0] + "</h1>");
+                write("<p>" + ListaQueijo[Queijo][1] + "</p>");
+                write("<p>" + ListaQueijo[Queijo][2] + "</p>");
+                write("<button onclick='window.close()'> Fechar </button>")
+                write("</body></html>");
+                close();
+            }
+          }
+         
+        </script>
+      
+</body>
+</html>

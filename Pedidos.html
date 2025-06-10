@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+  
+</head>
+<body>
+    <header> 
+        
+<table border="0" cellspacing="20" cellpadding="0" width="100%">
+  <tr>
+    <td align="left" class="imgLogo"> <img src="imagens/CanastraoLogoTopo.png" alt="Logo do Canastrão"> </td>
+      <td>
+            <address>
+               Av. Gorgonzola, 235 <br>
+               Tel: (21) 91235-1235 <br>
+             <a href="mailto:contato@canastrao.com.br">contato@canastrao.com.br</a>
+             </address>
+      </td>
+      </tr>
+    </table>
+    </header>
+                 
+    <nav>
+    <table border="0" cellspacing="20" cellpadding="0" width="100%">
+     <tr>
+          <td> 
+             <ul> 
+             <li> <a href="CanastraoQueijos.html"> Apresentação </a></li>  
+          </ul>
+        </td>
+     </tr>
+            
+            <tr> 
+                <td> 
+                    <ul> 
+                    <li> <a href="Queijos.html"> Queijos </a></li>
+                    </ul>
+                </td>
+            </tr>
+            
+            <tr> 
+               <td> 
+                    <ul> 
+                    <li> <a href="Harmonização.html"> Harmonização </a></li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td> 
+                    <ul> 
+                    <li> <a href="Pedidos.html"> Pedidos </a></li>
+                    </ul>
+                </td>
+            </tr>
+       </table>
+       </nav>
+
+       <section> 
+        <div class="colPriCompras"> 
+        <fieldset class="divCompras"> 
+        <td align="left">  Compras </td>
+   
+                <fieldset class="fsEsq" > 
+            <legend> Identificação</legend> 
+            <div class="divLinha"> 
+            <label class="colPri"> Nome: </label>
+            <input type="text" class= "inpGrande" name="nome" />
+            </div>  
+            
+            <div class="divLinha"> 
+            <label class="colPri"> E-mail: </label> 
+            <input type="text" class= "inpGrande" name= "e-mail" /> 
+            </div>
+
+            <fieldset class="fsDir"> <legend> Genero: </legend> 
+                <label> <input type="radio" name="sex" 
+                   value="Mas" checked> Mas </label>
+               <label> <input type="radio" name="sex" 
+                   value="Fem"/> Fem </label>
+                <label> <input type="radio" name="sex" 
+                   value= "Outro"/> Outro </label>
+           </fieldset> 
+
+            <div class="divLinha">
+                <label class="colPri"> Endereço: </label>
+            <textarea name= "endereço" rols="4" class="impGrande"> </textarea> 
+           </div>
+       
+          <div class="divLinha"> 
+          <label class="colPri" for="telefone"> Telefone: </label> 
+         <input type="text" class="impTelef" name="telefone" /> 
+        </div>
+
+        <fieldset class="fsDir"> 
+            <legend> Nascimento: </legend>
+            <input type="number" name="dia" 
+            min="1" max="31" class="numDD" /> /
+            <input type="number" name="mês" 
+            min="1" max="12" class="numDD" /> /
+            <input type="number" name="ano"
+             min="1945" max="2025" class="numQD" /> 
+           </fieldset>
+
+         
+        <div class="divLinha"> 
+          <label class="colPri" for="celular"> Celular: </label> 
+          <input type="text" class="impTelef" name="TextTel" required /> 
+          </div>
+         </fieldset>
+    
+            <fieldset class="fsEsq">
+                <legend> Seleção de Produtos e Pagamentos </legend>
+
+                <div class="divLinha"> 
+                <select name="selProduto" id="selProduto"> 
+                    <option> ----- </option> 
+                        <optgroup label="Nacional" class="colSelProd">
+                            <option> Canastra (500g)</option>
+                            <option> Queijo Minas (400g)</option>
+                            <option> Queijo Coalho (500g) </option>
+                        </optgroup>
+                        <optgroup label="Internacional"> 
+                            <option> Gorgonzola (200g) </option>
+                            <option > Queijo Brie (200g) </option>
+                        </optgroup>
+                </select>
+               
+            
+            <input type="button" value="Incluir" onclick="( this.form.selProduto);" />  
+            
+            <br>
+            <textarea class="elemDir" name="ListaPedidos"
+            readonly cols="30" rows="10"> </textarea> 
+            
+            <fieldset class="fsEsq" class ="colLabCrd" >
+                <legend> Cartão </legend>
+                 Bandeira:
+                <label> <input type="radio" name="cartão" value="Visa" checked> Visa </label>
+                <label> <input type="radio" name="cartão" value="Master"> Master </label>
+                <label> <input type="radio" name="cartão" value="Elo"> Elo </label>
+            
+                <br> <br> 
+                <div>
+                    <label class="fsEsq" for="validade"> Validade: </label>
+                <input type="number" name="validademes"id="diaVal" min="1" max="12" class="numDD" value="5"/> /
+                <input type="number2" name="validadeano" min="2015" max="2025" class="numDD" value="2025"  /> </div>
+                <br><br>
+                <div>
+                <label class="ColPri"> Número: </label>
+                <input type="text" name="número" required/>
+                </div>
+            </fieldset>
+
+             <br> <br>
+            
+            <label class="colLabCrd" for="TxtCPF"> CPF: 
+            <input type=text  class="impMedio" name="CPF" id="TxtCPF"
+            onChange="VerificaCPF(this);" required /> </label> 
+           
+        
+        
+            <label class="elemDir" for="TxtTotal"> Valor: R$ 
+                <input type="text" name="total" readonly id="TxtTotal" class="impMedio" value="0" />
+            </label>
+            
+           </fieldset>  
+           <div class="botões"> 
+            <input type="button" name="botão" value="Comprar">
+            <input type="reset" name="limpar" value="Limpar">
+           </div>
+
+        </class>       
+    </section> 
+    <script>
+        function calculaDV(num) 
+        {
+       var resto = 0, soma = 0;
+       for ( i = 2; i < 11; i++ ) 
+        {
+        soma = soma (num % 10) * i;
+        num = parseInt (num / 10);
+    }
+    resto = (soma % 11);
+    return (resto > 1) ? (11 - resto) : 0;
+}
+   function VerificaCPF ( campo ) 
+   {
+    var i, c, cpf; 
+    var iniCPF; 
+    var strCPF = campo.value; 
+
+   if ( strCPF.length != 11 ) 
+ { 
+  alert("CPF tem de ter 11 dígitos!"); 
+   return false; 
+} 
+
+    for ( i = 0; i < 11; i++ ) 
+    { 
+    c = strCPF.charAt(i); 
+   if ( (c < '0') || (c > '9')) 
+   { 
+      alert("Insira apenas os dígitos, caracter '.' inválido!"); 
+   return false; 
+  } 
+} 
+  iniCPF = strCPF.substring(0, 9); 
+ 
+    pd = calculaDV(iniCPF); 
+    sd = calculaDV(iniCPF * 10 + pd); 
+ 
+    if ( (pd != strCPF.charAt(9)) || (sd != strCPF.charAt(10)) ) 
+    { 
+        alert("Dígitos verificadores inválidos!"); 
+        return false; 
+    } 
+ 
+    return true; 
+}
+
+   var tabPrcProd = [0, 70, 23, 40, 20, 30]; 
+
+   function IncluiLista ( sel ) { 
+   var prod = sel.selectedIndex; 
+   if ( prod != 0 ) { 
+  var prc = tabPrcProd[prod]; 
+  sel.selectedIndex = 0; 
+  with ( sel.form ) { 
+    listaPedidos.value += 
+      sel.options[prod].text + '\n'; 
+  TxtTotal.value = prc + parseInt (TxtTotal.value); 
+  } 
+} 
+   else 
+     alert("Nenhum Produto selecionado!"); 
+} 
+
+</script>
+</body>
+</html> 
+        
